@@ -57,8 +57,11 @@ Terraform is used to create two buckets, a dataproc cluster and a bigquery data 
 
 ### 2️⃣ Data Cleaning & Transformation  
 - Process raw data using **Apache Spark** for scalable data transformation.
+  raw CSV file is transformed (converting data types)into parquet file and uploaded on GCS Data lake using  Apache Spark .
   Process of Installing and enabling Spark is mentioned in the file Spark.md with all the instructions to run on VM instance .
-- Use **DBT** for data modeling and transformations.  
+- Use **DBT** for data modeling and transformations.
+   Data models are created - identifying trends and patterns for stakeholders . 
+
 
 ### 3️⃣ Data Storage  
 - data is initially stores in Datalate in a bucket in Google Clous Storage .
