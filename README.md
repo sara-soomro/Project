@@ -53,7 +53,14 @@ Identify top-selling products.
 The kaggle data API is used to fetch the data from kaggle. A detailed description and how to authenticate can be found here: https://www.kaggle.com/docs/api. To run the project, it is required to create the environmental variables KAGGLE_USER and KAGGLE_KEY. I stored them in a ".env" file in the airflow folder together with AIRFLOW_UID.
 - Store raw data in **Google Cloud Storage (GCS)**.
 ###  Infrastructure Management :
-Terraform is used to create two buckets, a dataproc cluster and a bigquery data warehouse in the google cloud. Therefore, a google cloud project and a service account have to be created. The project name has to be adjusted in variables.tf. Besides, the key of the service account has to be downloaded as json and needs to be linked in variables.tf as "credentials". The service account should have the following roles: BigQuery Admin, Dataproc Administrator, Editor, Storage Admin and Storage Object Admin. Subsequently, the resources can be created with the terraform commands: terraform init terraform plan terraform apply
+Terraform is used to create a  bucket for file storage and a  data-set in  BigQuery warehouse .
+Step 1.  Therefore, a google cloud project and a service account have to be created.
+The project name has to be adjusted in variables.tf. Besides, the key of the service account has to be downloaded as json and needs to be linked in variables.tf as "credentials". 
+The service account should have the following roles: **BigQuery Admin, Dataproc Administrator, Editor, Storage Admin and Storage Object Admin**. 
+Subsequently, the resources can be created with the terraform commands:
+**terraform init**
+**terraform plan**
+**terraform apply**
 
 ### 2️⃣ Data Cleaning & Transformation  
 - Process raw data using **Apache Spark** for scalable data transformation.
