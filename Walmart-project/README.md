@@ -2,9 +2,11 @@ Welcome to your new dbt project!
 
 ### Using the starter project
 
-Try running the following commands:
-- dbt run
-- dbt test
+Configure dbt with this repo . 
+TODO 
+
+![Image Description](https://github.com/your-username/your-repo/blob/main/path-to-image.png?raw=true)
+
 
 
 ### Resources:
