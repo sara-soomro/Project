@@ -93,6 +93,9 @@ Subsequently, the resources can be created with the terraform commands:
 You can view the detailed interactive report on Looker Studio 
 [here](https://lookerstudio.google.com/u/0/reporting/34f3a837-48ab-413a-9c2e-07ab445dbd1e/page/agjDF).
 
+![Data Looker](https://github.com/sara-soomro/Project/blob/main/looker1.png?raw=true)
+![Data Looker](https://github.com/sara-soomro/Project/blob/main/looker.png?raw=true)
+
 
 ## 📊 Expected Insights  
 ✅ Top-selling product categories.  
