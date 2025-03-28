@@ -10,7 +10,13 @@ With a fully automated ETL pipeline orchestrated by Apache Airflow, the project 
  
  
 
+The data pipeline consists of the following major stages:
 
+Extract: Walmart sales data is pulled from an external API using Airflow
+Load: The data is stored in GCS 
+Transform: First with Apache Spack Raw files are transformed in Parquet and then Using dbt, data is cleaned and structured .
+Visualize: Insights are presented using Looker  dashboards
+Infrastructure: Terraform is used to provision GCS resources automatically
 
 
 ![Project Overview](https://github.com/sara-soomro/Project/blob/main/project-overview.png?raw=true)
