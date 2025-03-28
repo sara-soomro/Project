@@ -5,8 +5,7 @@ Welcome to your new dbt project!
 Configure dbt with this repo . 
 TODO 
 
-![Image Description](https://github.com/your-username/your-repo/blob/main/path-to-image.png?raw=true)
-
+![Image Description](https://github.com/sara-soomro/Project/blob/main/Walmart-project/dbt_models.png)
 
 
 ### Resources:
