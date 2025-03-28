@@ -8,6 +8,9 @@ As part of the project, I created a datapipeline that loads and processes data f
 Its an **end-to-end data pipeline** to extract, clean, store, and analyze data to derive insights about shopping trends.  
 
 
+![Project Overview](https://github.com/sara-soomro/Project/blob/main/project-overview.png?raw=true)
+
+
 ## Prolem Statement 
 
 This dataset is valuable for multiple analytical applications across retail, business, and data science fields. Below are some key insights and use cases:
