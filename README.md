@@ -3,9 +3,14 @@
 # Walmart Customer Analysis 🚀  
 
 ## 📖 Project Overview  
-This is the final project of the data engineering zoomcamp (https://github.com/DataTalksClub/data-engineering-zoomcamp)l
-As part of the project, I created a datapipeline that loads and processes data from kaggle to analyze Walmart customer purchasing behavior using transactional data. The data can be found here: [(https://www.kaggle.com/datasets/logiccraftbyhimanshi/walmart-customer-purchase-behavior-dataset)]
-Its an **end-to-end data pipeline** to extract, clean, store, and analyze data to derive insights about shopping trends.  
+This is the final project of the Data ZoomCamp 2025 (https://github.com/DataTalksClub/data-engineering-zoomcamp) focuses on building a robust data pipeline to process and visualize Walmart Sales Data. The goal is to extract  dataset from Kaggle ,  store in GCP and transform them using Spark and dbt in BigQuery, and create insightful visualizations using DataStudio Looker.
+
+With a fully automated ETL pipeline orchestrated by Apache Airflow, the project ensures data is collected, processed, and made available for analysis seamlessly. The final output is a set of interactive dashboards that help analyze Walmart sales trends across different dimensions like gender and  purchase Category
+
+ 
+ 
+
+
 
 
 ![Project Overview](https://github.com/sara-soomro/Project/blob/main/project-overview.png?raw=true)
@@ -42,7 +47,7 @@ Identify top-selling products.
 - **Data Extraction:** Python (`pandas`, `requests`), Kaggle API  
 - **Data Storage:** Google BigQuery & Google Cloud Storage (GCS)  
 - **Data Processing:** Apache Spark (Dataproc Cluster) & DBT  
-- **Data Orchestration:** Kestra (running in Docker) on VM instance in GCS 
+- **Data Orchestration:** Apachi Airflow(running in Docker) on VM instance in GCS 
 - **Data Visualization:** Looker
 - **Infrastructure Management:** Terraform (to manage GCS BigQuery , Storage instances (buckets)and cloud resources)
 
@@ -51,7 +56,8 @@ Identify top-selling products.
 ### 1️⃣ Data Collection  
 - **Source:** Downloading Walmart customer transaction data from [Kaggle](https://www.kaggle.com/).  
 - Use **Kaggle API** 
- Unfortunately, I did not find an API to that provides this data on a continuous basis. Therefore, I fetch the data from kaggle as one time operation. However, if an API would be available, the pipeline could be adjusted easily to operate on a schedule on Kestra .It loads data from the website transform it and loads in GCS .
+ Unfortunately, I did not find an API to that provides this data on a continuous basis. Therefore, I fetch the data from kaggle as one time operation. However, if an API would be available, the pipeline could be adjusted easily to operate on a schedule on Airflow .It loads data from the website transform it and loads in GCS .
+ [(https://www.kaggle.com/datasets/logiccraftbyhimanshi/walmart-customer-purchase-behavior-dataset)]
 **setup**
 The kaggle data API is used to fetch the data from kaggle. A detailed description and how to authenticate can be found here: https://www.kaggle.com/docs/api. To run the project, it is required to create the environmental variables KAGGLE_USER and KAGGLE_KEY. I stored them in a ".env" file in the airflow folder together with AIRFLOW_UID.
 - Store raw data in **Google Cloud Storage (GCS)**.
