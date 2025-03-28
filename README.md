@@ -87,8 +87,12 @@ Subsequently, the resources can be created with the terraform commands:
 - **Product Trends:** Identify best-selling and underperforming items.  
 
 ### 6️⃣ Data Visualization  
-- Create **interactive dashboards** using **Looker**.  
-- Generate **monthly sales , Customer Demographic Report**.  
+- Create **interactive dashboards** using **Looker**. to analize customer behaviour .
+  ## Looker Studio Report
+
+You can view the detailed interactive report on Looker Studio 
+[here](https://lookerstudio.google.com/u/0/reporting/34f3a837-48ab-413a-9c2e-07ab445dbd1e/page/agjDF).
+
 
 ## 📊 Expected Insights  
 ✅ Top-selling product categories.  
