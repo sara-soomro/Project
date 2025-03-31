@@ -51,9 +51,21 @@ Subsequently, the resources can be created with the terraform commands:
 **terraform apply**
 
 ### 2️⃣ Data Cleaning & Transformation  
-- Process raw data using **Kestra** for scalable data transformation.
-  raw CSV file is transformed (converting data types)into parquet file and uploaded on GCS Data lake using  Apache Spark .
-  Process of Installing and enabling Spark is mentioned in the file Spark.md with all the instructions to run on VM instance .
+
+Raw CSV file is transformed (converting data types)into parquet file and uploaded on GCS Data lake using  Apache Spark .
+
+Process of Installing and enabling Spark is mentioned in the file Spark.md with all the instructions to run on VM instance .
+To getup spark on your local machine or VM instance in GCP 
+
+refer to the linux.md file and pyspark.md file 
+
+CSV Files are downloaded from Kaggle on VM instance . Using Apache Spark raw CSV files are transformed (Data types) and converted to parquet files .
+Finaly the transformed parquet files are stored on GCP Bucket .
+
+
+![Parquet-GCP](https://github.com/sara-soomro/Project/blob/main/spark/CSV-Parquet.png)
+![Project Overview](https://github.com/sara-soomro/Project/blob/main/spark/cluster.png)
+
 - Use **DBT** for data modeling and transformations.
    Data models are created - identifying trends and patterns for stakeholders . 
 
