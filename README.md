@@ -12,7 +12,7 @@ With a fully automated ETL pipeline orchestrated by Kestra, the project ensures 
 ## 📖 Project Overview
 The data pipeline consists of the following major stages:
 
-Extract: Walmart sales data is pulled from an external API Kaggle using pythonScript running through Apache Spark.
+Extract: Walmart sales data is pulled from an external API Kaggle using pythonScript running through Apache Spark (DataProc) in a Cloud VM instance .
 Load: The data is stored in GCS 
 Transform: First with Apache Spack Raw files are transformed in Parquet and then Using dbt, data is cleaned and structured .
 Visualize: Insights are presented using Looker  dashboards
@@ -38,8 +38,11 @@ Infrastructure: Terraform is used to provision GCS resources automatically
  Unfortunately, I did not find an API to that provides this data on a continuous basis. Therefore, I fetch the data from kaggle as one time operation. However, if an API would be available, the pipeline could be adjusted easily to operate on a schedule on Kestra .It loads data from the website transform it and loads in GCS .
  [(https://www.kaggle.com/datasets/logiccraftbyhimanshi/walmart-customer-purchase-behavior-dataset)]
 
-- Store raw data in **Google Cloud Storage (GCS)**.
-- 
+Currently Python script using **Apacke Spark** running on **DataProc Cluster** is collecting data from Kaggle API
+
+![VM](https://github.com/sara-soomro/Project/blob/main/VM_cluster.png)
+- Store raw data on **VM instance** 
+
 ###  Infrastructure Management :
 Terraform is used to create a  bucket for file storage and a  data-set in  BigQuery warehouse .
 Therefore, a google cloud project and a service account have to be created.
@@ -71,7 +74,8 @@ Finaly the transformed parquet files are stored on GCP Bucket .
 
 
 ### 3️⃣ Data Storage  
-- data is initially stores in Data lake in a bucket in Google Cloud Storage .
+
+- Data is initially stores in Data lake in a bucket in Google Cloud Storage .
 - Store transformed data in **Google BigQuery** for efficient querying. Data set is created by partitioning on the purchare_date column 
 ![DS](https://github.com/sara-soomro/Project/blob/main/BigQuery/Dataset.jpeg)
 
