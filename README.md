@@ -57,10 +57,6 @@ Subsequently, the resources can be created with the terraform commands:
 
 Raw CSV file is transformed (converting data types)into parquet file and uploaded on GCS Data lake using  Apache Spark .
 
-Process of Installing and enabling Spark is mentioned in the file Spark.md with all the instructions to run on VM instance .
-To getup spark on your local machine or VM instance in GCP 
-
-refer to the linux.md file and pyspark.md file 
 
 CSV Files are downloaded from Kaggle on VM instance . Using Apache Spark raw CSV files are transformed (Data types) and converted to parquet files .
 Finaly the transformed parquet files are stored on GCP Bucket .
@@ -100,7 +96,56 @@ You can view the detailed interactive report on Looker Studio
 ![Data Looker](https://github.com/sara-soomro/Project/blob/main/looker1.png?raw=true)
 ![Data Looker](https://github.com/sara-soomro/Project/blob/main/looker.png?raw=true)
 
+# Running this project
+### Prerequisites
+* A Google Cloud Platform project named 
+* A service account with permission to create buckets and BigQuery datasets. For reference, the following roles where set:
+    * BigQuery Data Editor
+    * BigQuery User
+    * Storage Admin
+* A service account JSON key. This needs to be placed in terraform/keys/ with the name my-creds.json
 
+### Steps
+#### 1. Clone the repository and access the project directory: 
+
+```bash
+ git clone https://github.com/Project.git
+ cd Project
+```
+
+#### 2. Deploy the infrastructure with Terraform:
+
+```bash
+    cd terraform
+    terraform init
+    terraform plan
+    terraform apply
+```
+
+This creates the required bucket and BigQuery dataset in wikimedia-pageviews
+
+#### 3. Data ingestion
+
+Process of Installing and enabling Spark is mentioned in the file Spark.md with all the instructions to run on VM instance .
+To getup spark on your local machine or VM instance in GCP 
+
+Create a DataProc cluster and submit Job to load data on GCP .
+
+refer to the linux.md file and pyspark.md file 
+
+#### 3. Big Query 
+
+Run the sql query in the BigQuery foler to create Data-Set .
+
+### 4. dbt 
+
+Details on how to run DBT Models are in Walmart-Project folder .
+
+### 5. Looker 
+
+After creating DBT Model the data can ve visualized in Google Data Looker 
+
+ 
 ## 📊 Expected Insights  
 ✅ Top-selling product categories.  
 ✅ Customer spending patterns based on gender.  
