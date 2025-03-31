@@ -1,0 +1,20 @@
+id: create-partitioned-table
+namespace: my.namespace
+
+tasks:
+  - id: load-parquet-to-bq
+    type: io.kestra.plugin.gcp.bigquery.Load
+    from:
+      type: GCS
+      bucket: "{{ vars.GCP_BUCKET_NAME }}"
+      path: "*.parquet"
+    to:
+      dataset: "{{ vars.GCP_DATASET }}"
+      table: "Walmart_data"
+      createDisposition: CREATE_IF_NEEDED
+      writeDisposition: WRITE_TRUNCATE
+    format: PARQUET
+    partitioning:
+      type: TIME
+      field: "purchare_date"
+      requirePartitionFilter: false
