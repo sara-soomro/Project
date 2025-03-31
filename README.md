@@ -2,14 +2,14 @@
 
 # Walmart Customer Analysis 🚀  
 
-## 📖 Project Overview  
+## 📖 Problem Statement 
 This is the final project of the Data ZoomCamp 2025 (https://github.com/DataTalksClub/data-engineering-zoomcamp) focuses on building a robust data pipeline to process and visualize Walmart Sales Data. The goal is to extract  dataset from Kaggle ,  store in GCP and transform them using Spark and dbt in BigQuery, and create insightful visualizations using DataStudio Looker.
 
-With a fully automated ETL pipeline orchestrated by Kestra, the project ensures data is collected, processed, and made available for analysis seamlessly. The final output is a set of interactive dashboards that help analyze Walmart sales trends across different dimensions like gender and  purchase Category
+With a fully automated ETL pipeline orchestrated by Kestra, the project ensures data is collected, processed, and made available for analysis seamlessly. The final output is a set of interactive dashboards that help analyze Walmart sales trends across different dimensions like gender and  purchase Category . Identifying  **Top-selling product categories** and **Customer spending patterns based on gender**
 
  
  
-
+## 📖 Project Overview
 The data pipeline consists of the following major stages:
 
 Extract: Walmart sales data is pulled from an external API using Kestra
@@ -51,7 +51,7 @@ Subsequently, the resources can be created with the terraform commands:
 **terraform apply**
 
 ### 2️⃣ Data Cleaning & Transformation  
-- Process raw data using **Apache Spark** for scalable data transformation.
+- Process raw data using **Kestra** for scalable data transformation.
   raw CSV file is transformed (converting data types)into parquet file and uploaded on GCS Data lake using  Apache Spark .
   Process of Installing and enabling Spark is mentioned in the file Spark.md with all the instructions to run on VM instance .
 - Use **DBT** for data modeling and transformations.
@@ -59,7 +59,7 @@ Subsequently, the resources can be created with the terraform commands:
 
 
 ### 3️⃣ Data Storage  
-- data is initially stores in Datalate in a bucket in Google Clous Storage .
+- data is initially stores in Data lake in a bucket in Google Cloud Storage .
 - Store transformed data in **Google BigQuery** for efficient querying.
  
 
