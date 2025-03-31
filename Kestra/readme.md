@@ -1,7 +1,10 @@
 Prerequisite :
 Docker / Dokcker-compose installed on VM instance.
 
-docker-compose up to start an instance of Kestra which can be accessed on local browser on port 8080
+To start the docker-compose, use the following commands: 
+**docker-compose build**
+**docker-compose up**
+to start an instance of Kestra which can be accessed on local browser on port 8080
 https:localhost:8080
 
 First Flowchart
