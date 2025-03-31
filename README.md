@@ -72,7 +72,10 @@ Finaly the transformed parquet files are stored on GCP Bucket .
 
 ### 3️⃣ Data Storage  
 - data is initially stores in Data lake in a bucket in Google Cloud Storage .
-- Store transformed data in **Google BigQuery** for efficient querying.
+- Store transformed data in **Google BigQuery** for efficient querying. Data set is created by partitioning on the purchare_date column 
+![DS](https://github.com/sara-soomro/Project/blob/main/BigQuery/Dataset.jpeg)
+
+
  
 
 ### 4️⃣ Data Orchestration  
