@@ -1,3 +1,6 @@
-Terraform apply 
-terrform plan 
-terraform init
+```bash
+    cd terraform
+    terraform init
+    terraform plan
+    terraform apply
+```
