@@ -1,0 +1,15 @@
+id: run-spark-job
+namespace: Sara-DeZoomcamp
+tasks:
+  - id: run-spark-job-on-dataproc
+    type: io.kestra.plugin.gcp.dataproc.Job
+    configuration:
+      projectId: inspiring-453522_m5
+      region: us-west2
+      clusterName: cluster-bfdd
+      jobType: SPARK
+      mainClass: your.main.class
+      args:
+        - -- gs://buc-inspiring-453522_m5/code/06_spark_sql.py
+      jarFileUris:
+        - gs://hadoop-lib/gcs/gcs-connector-hadoop3-2.2.5.jar
