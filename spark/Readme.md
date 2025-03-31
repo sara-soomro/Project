@@ -31,8 +31,7 @@ Before you run the spark job. Make sure :
 gsutil cp 06_spark.py gs://<BUCKET>/code/
 
 
+```
 
 ![Parquet-GCP](https://github.com/sara-soomro/Project/blob/main/spark/CSV-Parquet.png)
 ![Project Overview](https://github.com/sara-soomro/Project/blob/main/spark/cluster.png)
-
-```
