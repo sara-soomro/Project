@@ -1,9 +1,8 @@
 Welcome to your new dbt project!
 
-### Using the starter project
+### DBT Models 
 
-Configure dbt with this repo . 
-TODO 
+Data models are created to analyse the data in dbt . 
 
 ![Image Description](https://github.com/sara-soomro/Project/blob/main/Walmart-project/dbt_models.png)
 
