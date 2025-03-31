@@ -12,7 +12,7 @@ With a fully automated ETL pipeline orchestrated by Kestra, the project ensures 
 ## 📖 Project Overview
 The data pipeline consists of the following major stages:
 
-Extract: Walmart sales data is pulled from an external API using Kestra
+Extract: Walmart sales data is pulled from an external API Kaggle using pythonScript running through Apache Spark.
 Load: The data is stored in GCS 
 Transform: First with Apache Spack Raw files are transformed in Parquet and then Using dbt, data is cleaned and structured .
 Visualize: Insights are presented using Looker  dashboards
@@ -42,7 +42,7 @@ Infrastructure: Terraform is used to provision GCS resources automatically
 - 
 ###  Infrastructure Management :
 Terraform is used to create a  bucket for file storage and a  data-set in  BigQuery warehouse .
-Step 1.  Therefore, a google cloud project and a service account have to be created.
+Therefore, a google cloud project and a service account have to be created.
 Besides, the key of the service account has to be downloaded as json and needs to be linked in main.tf file along with project ID
 The service account should have the following roles: **BigQuery Admin, Dataproc Administrator, Editor, Storage Admin and Storage Object Admin**. 
 Subsequently, the resources can be created with the terraform commands:
