@@ -4,4 +4,5 @@
     terraform plan
     terraform apply
 ```
-![infrastructure](https://github.com/sara-soomro/Project/blob/main/terraform/bucket.jpeg?raw=true)
+![infrastructure](https://github.com/sara-soomro/Project/blob/main/terraform/busket.jpeg)
+
