@@ -115,51 +115,14 @@ You can view the detailed interactive report on Looker Studio
 
 #### 2. Deploy the infrastructure with Terraform:
 
-```bash
-    cd terraform
-    terraform init
-    terraform plan
-    terraform apply
-```
+refer to terraform 
 
-This creates the required bucket and BigQuery dataset in wikimedia-pageviews
+
 
 #### 3. Data Transformationn
 
-Process of Installing and enabling Spark is mentioned in the file Spark.md with all the instructions to run on VM instance .
-To getup spark on your local machine or VM instance in GCP 
-
-Create a DataProc cluster and submit Job to load data on GCP .
-
-refer to the linux.md file and pyspark.md file 
-### 3. Data Transformation (Dataproc)
-```bash
-# Create Dataproc cluster
-gcloud dataproc clusters create cycling-cluster \
-    --region=us-central1 \
-    --single-node \
-    --service-account=<YOUR_SERVICE_ACCOUNT>
-
-# Submit Spark job
-gcloud dataproc jobs submit pyspark \
-    --cluster=cycling-cluster \
-    --region=us-central1 \
-    --jars=gs://spark-lib/bigquery/spark-3.5-bigquery-0.41.1.jar \
-    gs://<YOUR_BUCKET>/code/bigquery.py \
-    -- \
-        --input_2023=gs://<BUCKET>/cyclingdata_2023/* \
-        --input_2024=gs://<BUCKET>/cyclingdata_2024/* \
-        --output=<DATASET_ID>.factdata_all
-```
-Before you run the spark job. Make sure :
-
-- once it is created, in the GCS Bucket section, you will see other buckets apart from the one you created, replace the dataproc temp bucket in the bigquery.py file with your temp dataproc bucket id.
-
-- put the bigquery.py file in your original gcs bucket in an other folder called "code".
-```bash
-gsutil cp bigquery.py gs://<BUCKET>/code/
-```
-
+ Refer to spark folder 
+ 
 #### 3. Big Query 
 
 Run the sql query in the BigQuery foler to create Data-Set .
