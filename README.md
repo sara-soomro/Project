@@ -19,7 +19,7 @@ Visualize: Insights are presented using Looker  dashboards
 Infrastructure: Terraform is used to provision GCS resources automatically
 
 
-![Project Overview](https://github.com/sara-soomro/Project/blob/main/project-overview.png?raw=true)
+![Project Overview](https://github.com/sara-soomro/Project/blob/main/final-Project.png?raw=true)
 
 
 ## 🔹 Tech Stack  
