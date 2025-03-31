@@ -79,7 +79,7 @@ Finaly the transformed parquet files are stored on GCP Bucket .
  
 
 ### 4️⃣ Data Orchestration  
-- Use **Kestra (running in Docker)** to schedule and manage data pipeline workflows.
+- Use **Kestra (running in Docker)** to schedule and manage data pipeline workflows.In this project the Dataset was a one off data so it has not been scheduled to take on more data .Attached Kestra files can we modified with  schedules incase more data needs to be ingested . 
   
 
 ### 5️⃣ Data Analysis & Insights  
